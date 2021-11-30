@@ -3,8 +3,8 @@ const settings = {
   "state": {
     "frontity": {
       "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "title": "Dutchnews Ru on react",
+      "description": "Нидерланды Новости на русском"
     }
   },
   "packages": [

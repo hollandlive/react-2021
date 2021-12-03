@@ -38,5 +38,16 @@ div#headlines {
 	align-items: center;
 	font-size: 50px;
 	cursor: pointer;
+}
 
+#player_x {
+	color: green;
+}
+
+#player_0 {
+	color: red;
+}
+
+#reset {
+	color: yellow;
 }

@@ -3,3 +3,40 @@
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 }
+
+.playfield {
+	background-color: #e6e3df;
+	height: 100vh;
+}
+
+div#headlines {
+	height: 100px;
+	background-color: #d4c9b0;
+}
+
+.buttons {
+	text-align: center;
+  }
+
+.hide {
+	display: none;
+}  
+
+.container {
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	grid-template-rows: 33% 33% 33%;
+	max-width: 300px;
+}  
+.block {
+	border: 1px solid white;
+	min-height: 100px;
+	min-width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
+	cursor: pointer;
+
+}

@@ -1,11 +1,10 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-let reset = document.getElementById('reset');
 
 
-reset.addEventListener('click', (e) => { resetPlayfield ()});
-
-resetPlayfield = alert('Hui');
+reset.addEventListener("click", function() {
+  document.getElementById("reset").innerHTML = "Hello World";
+});
 
 
 });

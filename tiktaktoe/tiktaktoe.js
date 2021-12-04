@@ -1,4 +1,11 @@
 window.addEventListener('DOMContentLoaded', () => {
-   
-   console.log('DOM fully loaded and parsed');
+
+let reset = document.getElementById('reset');
+
+
+reset.addEventListener('click', (e) => { resetPlayfield ()});
+
+resetPlayfield = alert('Hui');
+
+
 });

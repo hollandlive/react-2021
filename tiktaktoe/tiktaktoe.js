@@ -1,1 +1,4 @@
-alert("Hello! I xxxx am an alert box!!");
+window.addEventListener('DOMContentLoaded', () => {
+   
+   console.log('DOM fully loaded and parsed');
+});

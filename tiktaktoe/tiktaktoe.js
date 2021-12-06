@@ -1,10 +1,11 @@
-window.addEventListener('DOMContentLoaded', () => {
+var total = 0;
+var count = 1;
 
+while (count<=10)  {
+	total += count;
 
+	count += 1;
 
-reset.addEventListener("click", function() {
-  document.getElementById("reset").innerHTML = "Hello World";
-});
+}
 
-
-});
+console.log (total);

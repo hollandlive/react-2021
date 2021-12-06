@@ -40,6 +40,10 @@ div#headlines {
 	cursor: pointer;
 }
 
+div#b1.block {
+	color: red;
+}
+
 /*.buttons {
 	display: flex;
     flex-direction: row;

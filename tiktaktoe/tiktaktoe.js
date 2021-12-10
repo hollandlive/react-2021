@@ -13,7 +13,7 @@
 let text = "#";
 
 for (let i = 0; i < 5; i++) {
-  text += "The number is " + text + "<br>";
+  text = text + text;
   console.log(text);
 }
 

@@ -1,6 +1,44 @@
-* {
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* --cell-width: 100px;
+    --cell-height: 125px; */
+    --cell-size: 100px;
+}
+body {
 	padding: 0;
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 }
 
+.board {
+    width: 100vh;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    /* width: var(--cell-width);
+    height: var(--cell-height); */
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid grey;
+}
+
+.cell:first-child {
+ background-color: hotpink;
+}
+.cell:nth-child(2) {
+    background-color: red;
+}
+.cell:nth-child(3) {
+    background-color: yellow;
+}
+.cell:last-child {
+    background-color: black;
+}

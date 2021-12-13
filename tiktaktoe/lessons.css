@@ -67,6 +67,9 @@ border-top: none;}
     position: absolute;
 }
 
+.cell.active {
+cursor: not-allowed;}
+
 .cell.player_x::before {
     transform: rotate(-45deg);
 }
@@ -90,3 +93,17 @@ border-top: none;}
     width: calc(var(--mark-size) * .8);
     height: calc(var(--mark-size) * .8);
 }
+
+.board.player_x .cell:hover::after,
+.board.player_x .cell:hover::before {
+    content: '';
+    background-color: red;
+    width: calc(var(--mark-size) * .1);
+    height: var(--mark-size);
+    position: absolute;}
+
+.cell.player_0:hover {
+    content: '';
+    background-color: yellow;
+}
+

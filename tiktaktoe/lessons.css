@@ -36,6 +36,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 
 .cell:first-child,
@@ -57,8 +58,8 @@ border-top: none;}
     border-bottom: none;
 }
 
-.cell.x::before,
-.cell.x::after {
+.cell.player_x::before,
+.cell.player_x::after {
     content: '';
     background-color: black;
     width: calc(var(--mark-size) * .1);
@@ -66,19 +67,26 @@ border-top: none;}
     position: absolute;
 }
 
-.cell.x::before {
+.cell.player_x::before {
     transform: rotate(-45deg);
 }
 
-.cell.x::after {
+.cell.player_x::after {
     transform: rotate(45deg);
 }
 
-.cell.player_x {
-    background-color: red;
+.cell.player_0::before,
+.cell.player_0::after {
+    content: '';
+    background-color: black;
+    width: var(--mark-size);
+    height: var(--mark-size);
+    position: absolute;
+    border-radius: 50%;
 }
 
-.cell.player_0 {
-    background-color: yellow;
+.cell.player_0::after {
+    background-color: white;
+    width: calc(var(--mark-size) * .8);
+    height: calc(var(--mark-size) * .8);
 }
-

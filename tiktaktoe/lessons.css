@@ -145,7 +145,7 @@ cursor: not-allowed;}
     width: 200px;
     height: 40px;
     position: relative;
-    left: 40%; 
+    left: 42%; 
     top: 75%;   
 }
 
@@ -158,7 +158,7 @@ cursor: not-allowed;}
 .messageText {
     color: red;
     position: relative;
-    left: 47%; 
+    left: 45%; 
     top: 75%;
     font-size: 3rem;   
 }

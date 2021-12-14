@@ -17,3 +17,7 @@ Started React Course...
 13-12-2021
 
 Tik Tak Toe tuttorials
+
+14-12-2021
+good explamation ES6
+https://www.freecodecamp.org/news/write-less-do-more-with-javascript-es6-5fd4a8e50ee2/

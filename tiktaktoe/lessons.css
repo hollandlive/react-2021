@@ -138,7 +138,7 @@ cursor: not-allowed;}
     display: none;
 }
 
-.game-message button#restart {
+.game-message button {
     color: white;
     background-color: grey;
     border: none;
@@ -149,13 +149,34 @@ cursor: not-allowed;}
     top: 75%;   
 }
 
+.game-message button:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: grey;
+}
+
 .messageText {
     color: red;
     position: relative;
     left: 47%; 
     top: 75%;
+    font-size: 3rem;   
+}
+
+.show {
+    display: inline;
+}
+
+/*
+to do - flex
+.messageText {
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 30px;   
 }
+*/
 
 
 

@@ -59,7 +59,9 @@ border-top: none;}
 }
 
 .cell.player_x::before,
-.cell.player_x::after {
+.cell.player_x::after,
+.board.player_x .cell:hover::after,
+.board.player_x .cell:hover::before {
     content: '';
     background-color: black;
     width: calc(var(--mark-size) * .1);
@@ -70,11 +72,13 @@ border-top: none;}
 .cell.active {
 cursor: not-allowed;}
 
-.cell.player_x::before {
+.cell.player_x::before,
+.board.player_x .cell:hover::before {
     transform: rotate(-45deg);
 }
 
-.cell.player_x::after {
+.cell.player_x::after,
+.board.player_x .cell:hover::after {
     transform: rotate(45deg);
 }
 
@@ -96,14 +100,21 @@ cursor: not-allowed;}
 
 .board.player_x .cell:hover::after,
 .board.player_x .cell:hover::before {
-    content: '';
-    background-color: red;
-    width: calc(var(--mark-size) * .1);
-    height: var(--mark-size);
-    position: absolute;}
-
-.cell.player_0:hover {
-    content: '';
-    background-color: yellow;
+    background-color: grey;
 }
 
+.board.player_0 .cell:not(.player_x):hover::after,
+.board.player_0 .cell:not(.player_x):hover::before {
+    content: '';
+    background-color: grey;
+    width: var(--mark-size);
+    height: var(--mark-size);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.board.player_0 .cell:not(.player_x):hover::after {
+    background-color: white;
+    width: calc(var(--mark-size) * .8);
+    height: calc(var(--mark-size) * .8);
+}

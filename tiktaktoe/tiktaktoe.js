@@ -2,10 +2,12 @@
 // Example from developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM fully loaded and parsed');
-  
+
   const reset = document.querySelector('#reset');
   const player_x = document.querySelector('#player_x');
   const player_0 = document.querySelector('#player_0');
+
+  const tiles = Array.from(document.querySelectorAll('.block'));
 
 
   reset.addEventListener('click', () => {

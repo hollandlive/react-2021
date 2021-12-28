@@ -24,3 +24,6 @@ https://www.freecodecamp.org/news/write-less-do-more-with-javascript-es6-5fd4a8e
 
 22-12-21
 Break
+
+28-12.2021
+#new week

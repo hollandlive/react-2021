@@ -37,3 +37,6 @@ Break
 08-01-2022
 #laravel install docker
 sudo APP_PORT=3001 ./vendor/bin/sail up
+
+09-01-2022
+#laravel

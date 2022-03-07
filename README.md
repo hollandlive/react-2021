@@ -6,7 +6,7 @@ yarn installed on local:3000
 
 wp-cli install
 
-01-12-21
+01-12-21--
 
 Today 4 years since I went to Greece. Now I am back
 

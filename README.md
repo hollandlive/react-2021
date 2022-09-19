@@ -47,3 +47,6 @@ restored
 17-03-2022
 laravel 
 
+19-09-2022
+xampp htdocs - cd ~/.bitnami/stackman/machines/xampp/volumes/root/htdocs
+

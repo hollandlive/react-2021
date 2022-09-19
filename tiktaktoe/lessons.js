@@ -16,9 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     cell.addEventListener('click', cellClicked, { once: true });
     function cellClicked() {
 
-      let isActive = 'player_0';
+      console.log('clicked');
 
-      let render = cell.classList.add(isActive);
+      // let isActive = 'player_0';
+
+      // let render = cell.classList.add(isActive);
     }
   })
 

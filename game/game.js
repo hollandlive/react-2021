@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const reset = document.querySelector('#reset');
 
 
+
     cells.forEach(
         (cell) => {
             cell.addEventListener('click', value());

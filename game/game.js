@@ -4,12 +4,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const start = document.querySelector('#start');
     const reset = document.querySelector('#reset');
 
-    const cells = [1, 0, 1, , 1];
 
     cells.forEach(
         (cell) => {
-            console.log({ cell });
+            cell.addEventListener('click', value());
         });
+
+    function value() {
+        console.log(cells);
+    }
+
+    let cells = [1, 2, 3];
 });
 
 

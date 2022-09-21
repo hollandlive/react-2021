@@ -23,13 +23,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // let result = cells.push(11);
     // result = cells.pop();
 
+    let boardCellsThatLeft = cells.pop();
+    console.log(boardCellsThatLeft);
+
     // let result = cells.join('');
 
     let playerTurn = Math.floor(Math.random() * cells.length);
 
-    console.log(cells);
     // console.log(result);
     console.log(playerTurn, cells[playerTurn]);
+
+    cells.splice(playerTurn, 1)
+
+    console.log(cells);
+
 
     //result was initially defined - but we can remove 'let' and redifine it
 

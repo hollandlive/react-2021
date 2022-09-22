@@ -10,32 +10,52 @@ document.addEventListener('DOMContentLoaded', (event) => {
         6, 7, 8
     ]
 
-
     const winningCondtitions = [
         012, 345,
         678, 036,
         147, 258,
         048, 246
     ]
+
+    start.addEventListener('click', startGame);
+    function startGame() {
+        let computerStartCell = Math.floor(Math.random() * cells.length);
+        console.log(computerStartCell);
+
+    }
+
+    let key = document.querySelectorAll("cell");
+    for (item of key) {
+        console.log(item.getAttribute("key"));
+    }
+
+    //console.log(cell);
+
+
     // array.push - array.pop disruptive methods - it alters the initial value of a variable
     // push - adds at the end, pop - distracts the last one
 
     // let result = cells.push(11);
     // result = cells.pop();
 
-    let boardCellsThatLeft = cells.pop();
-    console.log(boardCellsThatLeft);
-
     // let result = cells.join('');
 
-    let playerTurn = Math.floor(Math.random() * cells.length);
 
-    // console.log(result);
-    console.log(playerTurn, cells[playerTurn]);
+    //========================
 
-    cells.splice(playerTurn, 1)
+    // let playerTurn = Math.floor(Math.random() * cells.length);
 
-    console.log(cells);
+    // // console.log(result);
+    // console.log(playerTurn, cells[playerTurn]);
+
+    // cells.splice(playerTurn, 1);
+
+    // console.log(cells);
+
+    //========================
+
+
+
 
 
     //result was initially defined - but we can remove 'let' and redifine it

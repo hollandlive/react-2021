@@ -21,13 +21,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function startGame() {
         let computerStartCell = Math.floor(Math.random() * cells.length);
         console.log(computerStartCell);
+        // cells.splice(computerStartCell, 1);
+        // console.log('formatted cells = ', cells);
 
     }
 
-    let key = document.querySelectorAll("cell");
+    let key = document.querySelectorAll(".cell");
     for (item of key) {
-        console.log(item.getAttribute("key"));
+        let a = item.getAttribute("data-cell");
+        console.log('this is ', a);
+        const note = document.querySelector('.cell');
+        note.style.backgroundColor = 'yellow';
+
+
     }
+
+
 
     //console.log(cell);
 
@@ -50,7 +59,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // cells.splice(playerTurn, 1);
 
-    // console.log(cells);
+    // console.log('last', cells);
 
     //========================
 

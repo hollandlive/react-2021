@@ -22,10 +22,13 @@ const winningCondtitions = [
 document.addEventListener("click", function () {
 
     let computerStartCell = Math.floor(Math.random() * cells.length);
-    console.log(computerStartCell);
+
+    activeClass = this.getElementById(cells[computerStartCell]);
+    activeClass.classList.add("active");
+
+    console.log(cells[computerStartCell]);
 
 });
-
 
 
 // startGame() {
@@ -39,8 +42,8 @@ document.addEventListener("click", function () {
 
 
 
-// cells.splice(computerStartCell, 1);
-// console.log('formatted cells = ', cells);
+//cells.splice(computerStartCell, 1);
+//console.log('formatted cells = ', cells);
 
 
 

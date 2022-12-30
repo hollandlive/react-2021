@@ -17,17 +17,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         048, 246
     ]
 
-    start.addEventListener('click', startGame);
+    // start.addEventListener('click', startGame);
     function startGame() {
         let computerStartCell = Math.floor(Math.random() * cells.length);
-        
-        console.log(computerStartCell);
+
+        return computerStartCell;
 
         // cells.splice(computerStartCell, 1);
         // console.log('formatted cells = ', cells);
 
     }
 
+    console.log(startGame());
     let key = document.querySelectorAll(".cell");
     for (item of key) {
         let a = item.getAttribute("data-cell");

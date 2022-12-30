@@ -1,0 +1,50 @@
+1. I create a matrix of 9 numbers for 9 cells 
+   from 0 to 9 - game field
+
+const boardGame-[0 - 8];
+
+2. computer chose a random cell = gives a number
+
+var - rnd[0 - 8];
+
+function randomCell(poppedBoardGame)
+
+3. computer should fill the chosen cell with either an X or an O:
+3.1 decision: computer will always start(another option: user can start)
+3.2.decision2: computer will always start with X(another option: he can fill with 0)
+
+3.3 -> find cell that matches the number chosen
+
+function findCellById [0 - 8]
+
+3.4 -> set its value to X
+
+function setCellValue [x-- - 0]
+
+3.5 remove cell(number) that has been used
+
+function popTheLastElement 
+
+boardGame.pop();
+
+let boardGame = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+let poppedBoardGame = boardGame.pop();
+
+
+4. Game switch to the player(me) turn
+
+function swithcGame()
+
+repeat step 1
+    -> with poppedBoardGame  
+
+
+SIMPLE LEVEL - NO EXTRA LOGIC FOR COMPUTER -
+
+    repeat step 2
+repeat setp 3.3
+repeat step 3.4
+repeat step 3.5
+repeat step 4
+
+#30 - 12 - 22

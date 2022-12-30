@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     start.addEventListener('click', startGame);
     function startGame() {
         let computerStartCell = Math.floor(Math.random() * cells.length);
+        
         console.log(computerStartCell);
+
         // cells.splice(computerStartCell, 1);
         // console.log('formatted cells = ', cells);
 

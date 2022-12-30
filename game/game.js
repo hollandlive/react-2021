@@ -1,43 +1,61 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     console.log('DOM fully loaded and parsed');
 
-    const start = document.querySelector('#start');
-    const reset = document.querySelector('#reset');
+const start = document.getElementById('start');
+const reset = document.querySelector('#reset');
 
-    const cells = [
-        0, 1, 2,
-        3, 4, 5,
-        6, 7, 8
-    ]
+console.log(start);
 
-    const winningCondtitions = [
-        012, 345,
-        678, 036,
-        147, 258,
-        048, 246
-    ]
+const cells = [
+    0, 1, 2,
+    3, 4, 5,
+    6, 7, 8
+]
 
-    // start.addEventListener('click', startGame);
-    function startGame() {
-        let computerStartCell = Math.floor(Math.random() * cells.length);
+const winningCondtitions = [
+    012, 345,
+    678, 036,
+    147, 258,
+    048, 246
+]
 
-        return computerStartCell;
+document.addEventListener("click", function () {
 
-        // cells.splice(computerStartCell, 1);
-        // console.log('formatted cells = ', cells);
+    let computerStartCell = Math.floor(Math.random() * cells.length);
+    console.log(computerStartCell);
 
-    }
-
-    console.log(startGame());
-    let key = document.querySelectorAll(".cell");
-    for (item of key) {
-        let a = item.getAttribute("data-cell");
-        console.log('this is ', a);
-        const note = document.querySelector('.cell');
-        note.style.backgroundColor = 'yellow';
+});
 
 
-    }
+
+// startGame() {
+//     let computerStartCell = Math.floor(Math.random() * cells.length);
+
+//     return computerStartCell;
+// }
+
+// });
+
+
+
+
+// cells.splice(computerStartCell, 1);
+// console.log('formatted cells = ', cells);
+
+
+
+// console.log(startGame());
+
+
+let key = document.querySelectorAll(".cell");
+for (item of key) {
+    let a = item.getAttribute("data-cell");
+    console.log('this is ', a);
+    const note = document.querySelector('.cell');
+    note.style.backgroundColor = 'yellow';
+
+
+}
 
 
 
@@ -79,7 +97,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // <p>Hello $(title)</p>
     // `;
     // console.log(html); - template string
-});
+// });
+
 
 
 

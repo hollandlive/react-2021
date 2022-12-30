@@ -1,64 +1,82 @@
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     console.log('DOM fully loaded and parsed');
+document.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
 
-const start = document.getElementById('start');
-const reset = document.querySelector('#reset');
+    // const start = document.getElementById('start');
+    // console.log(start);
+    // const reset = document.querySelector('reset');
 
-console.log(start);
+    let cells = [
+        0, 1, 2,
+        3, 4, 5,
+        6, 7, 8
+    ]
 
-const cells = [
-    0, 1, 2,
-    3, 4, 5,
-    6, 7, 8
-]
-
-const winningCondtitions = [
-    012, 345,
-    678, 036,
-    147, 258,
-    048, 246
-]
-
-document.addEventListener("click", function () {
-
-    let computerStartCell = Math.floor(Math.random() * cells.length);
-
-    activeClass = this.getElementById(cells[computerStartCell]);
-    activeClass.classList.add("active");
-
-    console.log(cells[computerStartCell]);
-
-});
+    const winningCondtitions = [
+        012, 345,
+        678, 036,
+        147, 258,
+        048, 246
+    ]
 
 
-// startGame() {
-//     let computerStartCell = Math.floor(Math.random() * cells.length);
+    document.addEventListener("click", function () {
 
-//     return computerStartCell;
-// }
+        let computerStartCell = Math.floor(Math.random() * cells.length);
 
-// });
+        activeClass = this.getElementById(cells[computerStartCell]);
+        activeClass.classList.add("active");
+
+        console.log(cells[computerStartCell]);
+
+        let board = cells.splice(computerStartCell, 1);
+        console.log('formatted cells = ', cells);
+
+        switchPlayer();
+
+        return cells;
+
+    });
 
 
 
 
-//cells.splice(computerStartCell, 1);
-//console.log('formatted cells = ', cells);
+    function switchPlayer() {
+        document.addEventListener("click", function () {
+
+        });
+    }
+
+    console.log(cells);
+
+
+    // startGame() {
+    //     let computerStartCell = Math.floor(Math.random() * cells.length);
+
+    //     return computerStartCell;
+    // }
+
+    // });
 
 
 
-// console.log(startGame());
+
+    //cells.splice(computerStartCell, 1);
+    //console.log('formatted cells = ', cells);
 
 
-let key = document.querySelectorAll(".cell");
-for (item of key) {
-    let a = item.getAttribute("data-cell");
-    console.log('this is ', a);
-    const note = document.querySelector('.cell');
-    note.style.backgroundColor = 'yellow';
+
+    // console.log(startGame());
 
 
-}
+    let key = document.querySelectorAll(".cell");
+    for (item of key) {
+        let a = item.getAttribute("data-cell");
+        console.log('this is ', a);
+        const note = document.querySelector('.cell');
+        note.style.backgroundColor = 'yellow';
+
+
+    }
 
 
 
@@ -100,7 +118,7 @@ for (item of key) {
     // <p>Hello $(title)</p>
     // `;
     // console.log(html); - template string
-// });
+});
 
 
 

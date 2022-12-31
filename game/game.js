@@ -5,11 +5,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // console.log(start);
     // const reset = document.querySelector('reset');
 
-    let gameCells = [
-        0, 1, 2,
-        3, 4, 5,
-        6, 7, 8
-    ]
 
     const winningCondtitions = [
         012, 345,
@@ -37,7 +32,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     });
 
+    let gameCells = [
+        0, 1, 2,
+        3, 4, 5,
+        6, 7, 8
+    ]
+    let numCallbackRuns = 0;
 
+
+
+    gameCells.forEach((element) => {
+        console.log({ element });
+        gameTurnPressCell();
+        numCallbackRuns++;
+    }
+    );
+
+    function gameTurnPressCell() {
+        console.log('hi');
+    }
 
 
     function switchPlayer() {
@@ -68,15 +81,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // console.log(startGame());
 
 
-    let key = document.querySelectorAll(".cell");
-    for (item of key) {
-        let a = item.getAttribute("data-cell");
-        console.log('this is ', a);
-        const note = document.querySelector('.cell');
-        note.style.backgroundColor = 'yellow';
+    // let key = document.querySelectorAll(".cell");
+    // for (item of key) {
+    //     let a = item.getAttribute("data-cell");
+    //     console.log('this is ', a);
+    //     const note = document.querySelector('.cell');
+    //     note.style.backgroundColor = 'yellow';
 
 
-    }
+    // }
 
 
 

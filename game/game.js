@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // console.log(start);
     // const reset = document.querySelector('reset');
 
-    let cells = [
+    let gameCells = [
         0, 1, 2,
         3, 4, 5,
         6, 7, 8
@@ -21,19 +21,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     document.addEventListener("click", function () {
 
-        let computerStartCell = Math.floor(Math.random() * cells.length);
+        let computerStartCell = Math.floor(Math.random() * gameCells.length);
 
-        activeClass = this.getElementById(cells[computerStartCell]);
+        activeClass = this.getElementById(gameCells[computerStartCell]);
         activeClass.classList.add("active");
 
-        console.log(cells[computerStartCell]);
+        console.log(gameCells[computerStartCell]);
 
-        let board = cells.splice(computerStartCell, 1);
-        console.log('formatted cells = ', cells);
+        let board = gameCells.splice(computerStartCell, 1);
+        console.log('formatted cells = ', gameCells);
 
         switchPlayer();
 
-        return cells;
+        return gameCells;
 
     });
 
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 
-    console.log(cells);
+    //console.log(gameCells);
 
 
     // startGame() {

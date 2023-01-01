@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     ]
 
 
+
+
     document.addEventListener("click", function () {
 
         let computerStartCell = Math.floor(Math.random() * gameCells.length);
@@ -39,22 +41,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
     ]
     let numCallbackRuns = 0;
 
-
-
     gameCells.forEach((element) => {
         console.log({ element });
-        gameTurnPressCell();
+        switchPlayer();
+        switchPlayer()
         numCallbackRuns++;
     }
     );
 
-    function gameTurnPressCell() {
-        console.log('hi');
-    }
-
 
     function switchPlayer() {
         document.addEventListener("click", function () {
+            console.log('hi');
 
         });
     }
@@ -62,7 +60,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     //console.log(gameCells);
 
 
-    // startGame() {
+    // function startGame() {
     //     let computerStartCell = Math.floor(Math.random() * cells.length);
 
     //     return computerStartCell;

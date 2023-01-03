@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     gameCells.forEach((element) => {
         console.log({ element });
         switchPlayer();
-        switchPlayer()
         numCallbackRuns++;
     }
     );

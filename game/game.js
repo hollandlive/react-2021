@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     ]
 
 
+    function startOrReset(event) {
+
+        let button = document.getElementById('start').value;
+        console.log(button);
+
+
+    }
 
 
     document.addEventListener("click", function () {

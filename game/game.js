@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // console.log(start);
     // const reset = document.querySelector('reset');
 
-
     const winningCondtitions = [
         012, 345,
         678, 036,

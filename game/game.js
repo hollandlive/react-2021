@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         let board = gameCells.splice(computerStartCell, 1);
         console.log('formatted cells = ', gameCells);
 
-        //switchPlayer();
+        switchPlayer();
 
         return gameCells;
 
@@ -49,10 +49,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
     function switchPlayer() {
-        // document.addEventListener("click", function () {
         //     console.log('hi');
-
-        // });
     }
 
     //console.log(gameCells);

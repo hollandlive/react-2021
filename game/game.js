@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // const start = document.getElementById('start');
     // console.log(start);
     // const reset = document.querySelector('reset');
-
+    //
     const winningCondtitions = [
         012, 345,
         678, 036,
@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
     }
-
 
     document.addEventListener("click", function () {
 

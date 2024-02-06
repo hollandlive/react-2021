@@ -18,20 +18,25 @@
 <body>
     <div class="board">
         <div class="cell" id="0">
-            <select name="pets" id="pet-select">
-                <option value="">Выбери Свое</option>
-                <option value="dog"><span id="colodd">Колодец</span></option>
-                <option value="cat">Ножницы</option>
-                <option value="hamster">Бумага</option>
-            </select>
+            <form>
+                <div class="text">Your Choice</div>
+                <select id="playerChoice">
+                    <option value="well"><span id="well">Колодец</span></option>
+                    <option value="scissors"><span id="scissors">Ножницы</span></option>
+                    <option value="paper"><span id="paper">Бумага</span></option>
+                </select>
+                <button id="btn">Get the Selected Index</button>
+
+            </form>
+
         </div>
         <div class="cell" id="1">
             <div>
-                <button type="button" id="start">Start</button>
+                <button id="start">Start</button>
                 <button type="button" id="reset">Reset</button>
             </div>
         </div>
-        <div class="cell" id="1">
+        <div class="cell" id="2">
             <div class="comp">
                 <div class="text">Computer Choose</div>
                 <div class="title" id="computerPlay">?</div>

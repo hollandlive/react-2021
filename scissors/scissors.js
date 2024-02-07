@@ -8,7 +8,8 @@
 // })
 
 
-const btn = document.querySelector('#btn');
+const btn = document.querySelector('#start');
+console.log(btn);
 const playerChoice = document.querySelector('#playerChoice');
 btn.onclick = (event) => {
     e.preventDefault();

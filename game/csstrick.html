@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Tricks</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            background-color: grey;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .loader,
+        .loader span {
+            background-color: yellow;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="loader">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
 
 </body>
 

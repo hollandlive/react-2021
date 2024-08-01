@@ -18,6 +18,63 @@
         .loader,
         .loader span {
             background-color: yellow;
+            width: 10em;
+            height: 10em;
+            border: 0.25em solid white;
+            border-radius: 1em;
+            position: absolute;
+            mix-blend-mode: screen;
+        }
+
+        .loader {
+            background-color: gold;
+            animation: rotating 2s linear infinite;
+        }
+
+        @keyframes rotating {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        .loader span {
+            animation: de-rotating 4s linear infinite;
+        }
+
+        @keyframes de-rotating {
+
+            from,
+            to {
+                transform: rotate(0deg) scale(0.5);
+            }
+
+            50% {
+                transform: rotate(-180deg) scale(1.2);
+            }
+        }
+
+        .loader span:nth-child(1) {
+            top: 5em;
+            left: 5em;
+            background-color: blue;
+        }
+
+        .loader span:nth-child(2) {
+            top: -5em;
+            left: 5em;
+            background-color: hotpink;
+        }
+
+        .loader span:nth-child(3) {
+            top: 5em;
+            left: -5em;
+            background-color: mediumpurple;
+        }
+
+        .loader span:nth-child(3) {
+            top: -5em;
+            left: -5em;
+            background-color: limegreen;
         }
     </style>
 </head>

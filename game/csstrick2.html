@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tricks</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        .container {
+            margin: 0 auto;
+            height: 20vh;
+            width: 100vh;
+            display: flex;
+            background-color: aliceblue;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cell {
+            padding: 10px 10px;
+            height: 3em;
+            width: 3em;
+            border: 0.2em red solid;
+            border-radius: 0.5em;
+            background-color: grey;
+            text-align: center;
+
+        }
+
+        .block span:nth-child(1) {
+            background-color: yellow;
+
+        }
+
+        .block span:nth-child(2) {
+            background-color: red;
+
+        }
+
+        .block span:nth-child(3) {
+            background-color: hotpink;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="cell">grid</span>
+        <span class="cell">grid</span>
+        <span class="cell">grid</span>
+    </div>
+    <div class="container">
+        <span class="cell">grid</span>
+        <span class="cell">grid</span>
+        <span class="cell">grid</span>
+    </div>
+    <div class="container">
+        <span class="cell">grid</span>
+        <span class="cell">grid</span>
+        <span class="cell">grid</span>
+    </div>
+    <div class="container">
+        <button type="button" id="buttonStart">Startdtt</button>
+        <button type="button" id="buttonReset">ssReseddd</button>
+    </div>
+    <script>
+        const buttonStart = document.getElementById('buttonStart');
+        const buttonReset = document.getElementById('buttonReset');
+
+        function randomCell() {
+            const userInput = prompt('Please enter some text:');
+            console.log(userInput);
+        }
+
+        // Add an event listener to the button that listens for the click event
+        buttonStart.addEventListener('click', randomCell => {
+            // console.log("The child Event won't execute")
+        }
+        );
+        buttonReset.addEventListener('click', function () {
+            // Display the prompt when the button is clicked
+            const userInput = prompt('Please enter some text:');
+            console.log(userInput);
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

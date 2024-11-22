@@ -64,23 +64,29 @@
         <span class="cell">grid</span>
     </div>
     <div class="container">
-        <button type="button" id="buttonStart">Startdtt</button>
-        <button type="button" id="buttonReset">ssReseddd</button>
+        <button type="button" id="buttonStart">Start</button>
+        <button type="button" id="buttonReset">Reset</button>
     </div>
     <script>
         const buttonStart = document.getElementById('buttonStart');
         const buttonReset = document.getElementById('buttonReset');
 
-        function randomCell() {
-            const userInput = prompt('Please enter some text:');
-            console.log(userInput);
+        // Create a variable and initialize it with a value or element
+        let myElement = document.getElementById('buttonStart');
+
+        if (buttonStart !== null) {
+            buttonStart.addEventListener('click', randomCell)
+        } else {
+            console.log("element not found");
         }
 
-        // Add an event listener to the button that listens for the click event
-        buttonStart.addEventListener('click', randomCell => {
-            // console.log("The child Event won't execute")
+        function randomCell() {
+            // console.log("function here");
+
+            let computerStartCell = Math.floor(Math.random() * gameCells.length);
+
         }
-        );
+
         buttonReset.addEventListener('click', function () {
             // Display the prompt when the button is clicked
             const userInput = prompt('Please enter some text:');

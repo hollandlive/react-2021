@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
 
     //console.log(gameCells);
+    //
 
 
     // function startGame() {

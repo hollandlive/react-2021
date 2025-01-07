@@ -124,3 +124,79 @@ function greetIfRetired(age) {
         console.log('Have a nice day!');
     }
 }
+//
+function calculateTaxes(income) {
+    if (income <= 0) {
+        return 'neg';
+    }
+    if (income > 0 && income <= 1000) {
+        return income * 0.02;
+    } else if (income <= 10000) {
+        return income * 0.03;
+
+    } else {
+        return income * 0.05;
+    }
+}
+calculateTaxes(500);
+//
+function getTipsRating(amount) {
+    if (amount > 50) {
+        return 'excellent';
+    } else if (amount > 20) {
+        return 'great';
+    } else if (amount > 10) {
+        return 'good';
+    } else if (amount > 0) {
+        (console.log('poor'));
+    } else {
+        return 'terrible';
+    }
+}
+
+getTipsRating(5);
+//
+function printOddOrEven(n) {
+
+    if ((n % 2) === 0) {
+        console.log('even');
+    } else {
+        console.log('odd');
+
+    }
+}
+printOddOrEven(4);
+printOddOrEven(5);
+//
+function checkWordLength(word) {
+    if (word.length < 4) {
+        console.log('is a short word');
+    } else {
+        console.log('is a long word');
+    }
+}
+//
+checkWordLength('Hi');
+checkWordLength('Hello');
+
+function canBuyBeer(age) {
+    if (age < 18) {
+        return 'You can not buy beer';
+    } else {
+        return 'You can buy beer';
+    }
+}
+canBuyBeer(15);
+//
+function printOddOrEven(n) {
+
+    if ((n % 2) = 0) {
+        console.log('even');
+    } else {
+        console.log('odd');
+
+        let n = 4;
+        let n = 5;
+
+    }
+}

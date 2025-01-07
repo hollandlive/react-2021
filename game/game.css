@@ -12,7 +12,7 @@
 }
 
 .cell {
-    border: 1px solid black;
+    border: 1px solid red;
     padding: 30px;
     margin: 5px;
 }

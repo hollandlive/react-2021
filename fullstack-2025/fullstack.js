@@ -214,4 +214,35 @@ console.log(distances.length);
 let flowers = ['rose', 'tulip', 'sunflower', 'daisy', 'lily', 'lilac', 'orchid'];
 console.log(flowers[1]);
 //
+let fruits = ['apple', 'orange', 'pineapple', 'mango'];
+fruits.push('pear', 'banana');
+console.log(fruits);
+//Write a for loop that prints odd numbers from 3 to 11 inclusive to the console.
+
+for (let i = 3; i <= 11; i + 1) {
+
+    if ((i % 2) === 1) {
+        console.log(i);
+        i = i + 1;
+    } else if ((i % 2) === 0) {
+        i = i + 1;
+    }
+}
+// console.log(9 % 2);
+// Write a for loop that outputs numbers from 5 to 1 inclusive to the console.
+for (let i = 5; i >= 1; i--) {
+    console.log(i);
+}
+/* Write a function sumFromTo, which:
+        
+Takes two integers, min and max.
+Returns the sum of all integers from min to max inclusive. */
+function sumFromTo(min, max) {
+    let sum = 0;
+    for (let i = min; i <= max; i++) {
+        sum = sum + i;
+    }
+    return sum;
+}
+console.log(sumFromTo(1, 8));
 

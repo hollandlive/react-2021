@@ -226,3 +226,118 @@ console.log(cities); // the console will display ['Kyiv', 'London', 'Paris', 'To
 
 Alternatively, we can use the push() method to add one or more new elements to the array's end. These elements will be placed after the last existing one:
 
+Loops
+In your programs, you'll often need to execute one command set more than once. Loops serve this exact purpose, and today we'll focus on a single loop type — the for loop. Here's an example of a loop that triggers console.log five times, a.k.a, a loop with five iterations:
+
+for (let age = 1; age <= 5; age = age + 1) {
+  console.log(`I am ${age}`);
+}
+
+Let's break the loop's building blocks:
+
+The for keyword initiates the loop
+Inside the parentheses (), there are three components:
+The initial command let age = 1, executed only once before the loop starts
+The condition age <= 5, checked before each loop iteration
+The command age = age + 1, executed after each loop iteration
+The command console.log(I am ${age}), placed inside the curly braces {}, forms the loop body and is executed on each iteration
+...and how they come to work together:
+
+The command let age = 1 is executed.
+The condition age <= 5 is checked.
+Since the condition is true (1 <= 5), the loop body is executed.
+The text I am 1 is displayed in the console (since age = 1).
+The command age = age + 1 is executed, and age becomes 2.
+Steps second through fith are repeated as long as the condition is met. When age reaches 6, the condition becomes false, and the loop ends. In the console, we'll see:
+
+I am 1
+I am 2
+I am 3
+I am 4
+I am 5
+
+Shortcut Assignment
+We can write the age = age + 1 command with the shortcut assignment operation age += 1. This lets us increase the value by any number, for example:
+
+age += 1; // equivalent to age = age + 1;
+age += 10; // equivalent to age = age + 10;
+
+Shortcut assignment can also be used for other arithmetic operations:
+
+age -= 5; // equivalent to age = age - 5;
+age *= 5; // equivalent to age = age * 5;
+age /= 5; // equivalent to age = age / 5;
+age %= 5; // equivalent to age = age % 5;
+
+Most often, the number in a loop is incremented or decremented by 1, and thus we can write these operations as:
+
+age++; // equivalent to age += 1;
+age--; // equivalent to age -= 1;
+
+💡 The operation ++ is called an increment, and -- is a decrement.
+
+Reverse Iteration
+Sometimes, instead of increasing, we need to decrease the loop variable. Consider this example:
+
+for (let i = 3; i > 0; i--) {
+  console.log(i);
+}
+
+Here, we store 3 in the loop variable let i = 3, and we decrease its value by 1 with each iteration. In the console, we'll see:
+
+3
+2
+1
+
+Sum of Numbers
+A loop can be used to sum numbers, like so:
+
+function sumFromTo(min, max) {
+  let sum = 0;
+
+  for (let n = min; n <= max; n++) {
+    sum += n; 
+  }
+
+  return sum;
+}
+
+console.log(
+  sumFromTo(1, 5) // will output 15
+);
+
+Loop with Different Steps
+In JavaScript, we can create loops with different steps. This means the loop variable can be increased or decreased by any specified value, not just 1. Below is an example where the loop step is passed as a third parameter when calling the function:
+
+function sumFromTo(min, max, step) {
+  let sum = 0;
+
+  for (let n = min; n <= max; n += step) {
+    sum += n; 
+  }
+
+  return sum;
+}
+
+console.log(
+  sumFromTo(1, 5, 2) // will output 9
+);
+
+Factorial (Product of Numbers from 1 to N)
+Factorial of a natural number N is the product of all natural numbers from 1 to N. We can calculate it with a for loop:
+
+function factorial(N) {
+  let result = 1; // start with 1
+
+  for (let n = 1; n <= N; n++) {
+    result *= n; // multiply the product of previous numbers by the current number n
+  }
+
+  return result; // return the calculated factorial
+}
+
+const result = factorial(5);
+
+console.log(result); // will output 120
+
+💡 Natural numbers are the numbers that appear when counting objects or their order. These are numbers like 1, 2, 3, 4, … The set of natural numbers is commonly denoted by N.

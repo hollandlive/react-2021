@@ -205,3 +205,24 @@ In the first if, we check whether the age is greater than or equal to 18. If thi
 If the age is less than 18, we move to the next if, where we check whether the age is greater than 7. If the condition is true, we return Hi!.
 If this condition also fails, we move to the third if, where we check whether the age is greater than 3. If the condition is true, we return Hi, kid!.
 If none of these conditions are met, the last line executes, where the function returns Hi, toddler!.
+
+Replacing an Element by Index
+We can modify an array element through its index by simply assigning it a new value. For example:
+
+let cities = ['Kyiv', 'London', 'Paris', 'Tokyo'];
+
+cities[2] = 'New York';
+
+console.log(cities); // the console will display ['Kyiv', 'London', 'New York', 'Tokyo']
+
+Adding an Element at the End of the Array
+To append a new element to the array's end, we can assign it to an index equal to the array's current length:
+
+let cities = ['Kyiv', 'London', 'Paris', 'Tokyo'];
+
+cities[cities.length] = 'New York';
+
+console.log(cities); // the console will display ['Kyiv', 'London', 'Paris', 'Tokyo', 'New York']
+
+Alternatively, we can use the push() method to add one or more new elements to the array's end. These elements will be placed after the last existing one:
+

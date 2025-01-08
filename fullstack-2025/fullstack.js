@@ -200,3 +200,18 @@ function printOddOrEven(n) {
 
     }
 }
+//
+let countries = [
+    'Mongolia',
+    'Yakutia',
+    'Netherlands'
+];
+console.log(countries);
+//
+let distances = [3, 20, 34, 56, 1];
+console.log(distances.length);
+//
+let flowers = ['rose', 'tulip', 'sunflower', 'daisy', 'lily', 'lilac', 'orchid'];
+console.log(flowers[1]);
+//
+

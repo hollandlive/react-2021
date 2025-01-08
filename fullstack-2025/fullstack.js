@@ -245,4 +245,12 @@ function sumFromTo(min, max) {
     return sum;
 }
 console.log(sumFromTo(1, 8));
-
+// Write a function factorial that takes a natural number N and returns its factorial.
+function factorial(N) {
+    let res = 1;
+    for (let i = 1; i <= N; i++) {
+        res *= i;
+    }
+    return res;
+}
+console.log(factorial(5));

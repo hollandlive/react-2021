@@ -66,17 +66,32 @@
         //     console.log(char);
         // }
 
-        const text = 'Working with Strings';
-        let result = '';
+        // function printFromTo(input, start, end) {
+        //     start = 0;
+        //     end = input.length;
+        //     // console.log(input[1]);
+        //     // console.log(end);
+        //     for (let i = 0; i <= input.length; i++) {
+        //         console.log(input[i]);
+        //     }
+        // }
+        // 
 
-        for (let char of text) {
-            if (char !== ' ') {
-                // adding everything except spaces
-                result += char;
+        function replaceSpaces(input) {
+            let result = '';
+            for (let i = 0; i < input.length; i++) {
+                if (input[i] === ' ') {
+                    result = result + '-';
+                } else {
+                    result = result + input[i];
+                }
             }
+            //console.log(result);
+            return result;
         }
+        result = replaceSpaces('Hello dwdw ded F uckk cc');
+        console.log(result);
 
-        console.log(result); // 'WorkingwithStrings'
 
     </script>
 </body>

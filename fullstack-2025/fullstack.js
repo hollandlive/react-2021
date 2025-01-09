@@ -254,4 +254,54 @@ function factorial(N) {
     return res;
 }
 console.log(factorial(5));
+//The title variable contains a string. Use a loop to print this string to the console, one character per iteration, from first to last.
+const title = 'Strings';
+for (let i = 0; i <= title.length - 1; i++) {
+    console.log(title[i]);
+}
+/* Write a printFromTo function that: 
+ Accepts three parameters: input, start, and end.
+Prints the characters of the input string to the console from 
+the start to the end indexes, inclusive. */
+
+function printFromTo(input, start, end) {
+    for (let i = start; i <= end; i++) {
+        console.log(input[i]);
+    }
+}
+
+/*Write a function printBackwards that:
+Takes three parameters: input, start, and end
+Prints the characters of the input string to the console 
+in reverse, i.e.: from the index end to start indexes, 
+inclusive. */
+
+function printBackwards(input, start, end) {
+    for (let i = end; i >= start; i--) {
+        console.log(input[i]);
+    }
+}
+printBackwards('hellodjsjs', 1, 3);
+
+/* 
+The replaceSpaces function takes a string input.
+Modify the function by adding a for loop that replaces 
+each space in input with a hyphen -.
+Return the modified string from the function.
+*/
+
+function replaceSpaces(input) {
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] === ' ') {
+            result = result + '-';
+        } else {
+            result = result + input[i];
+        }
+    }
+    //console.log(result);
+    return result;
+}
+result = replaceSpaces('Hello F uckk cc');
+console.log(result);
 //

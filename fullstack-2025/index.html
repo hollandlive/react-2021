@@ -60,11 +60,23 @@
         // for (let i = 2; i <= 7; i++) {
         //     console.log(i);
         // }
-        const title = 'String';
+        // const title = 'String';
 
-        for (let char of title) {
-            console.log(char);
+        // for (let char of title) {
+        //     console.log(char);
+        // }
+
+        const text = 'Working with Strings';
+        let result = '';
+
+        for (let char of text) {
+            if (char !== ' ') {
+                // adding everything except spaces
+                result += char;
+            }
         }
+
+        console.log(result); // 'WorkingwithStrings'
 
     </script>
 </body>

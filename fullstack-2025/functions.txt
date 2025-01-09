@@ -341,3 +341,139 @@ const result = factorial(5);
 console.log(result); // will output 120
 
 💡 Natural numbers are the numbers that appear when counting objects or their order. These are numbers like 1, 2, 3, 4, … The set of natural numbers is commonly denoted by N.
+
+Iterating Over String Characters
+In this lesson, we'll learn how to iterate through a string and create a new string based on an existing one.
+
+Iteration with Index
+To iterate over the characters in a string, we can use a for loop and iterate over indices from 0 to the last one. Usually, the loop variable is named i, short for index. For example:
+
+const title = 'String';
+
+for (let i = 0; i < title.length; i++) {
+  console.log(title[i]);
+}
+
+The console will output:
+
+S
+t
+r
+i
+n
+g
+
+If we don't need all characters, we can both start the iteration from a later and conclude the iteration prematurely. For instance:
+
+const title = 'String';
+
+for (let i = 2; i < 5; i++) {
+  console.log(title[i]);
+}
+
+The console will output:
+
+r
+i
+n
+
+Reverse Order Iteration
+To iterate over the characters in reverse order, start from the last index and decrease it in the loop:
+
+const title = 'String';
+
+for (let i = title.length - 1; i >= 0; i--) {
+  console.log(title[i]);
+}
+
+The console will output:
+
+g
+n
+i
+r
+t
+S
+
+Iterating without an Index
+We can also iterate over the characters of a string using a for of loop, which doesn't require indices:
+
+const title = 'String';
+
+for (let char of title) {
+  console.log(char);
+}
+
+Counting Characters
+Using a loop, we can count the number of specific characters in a string, such as spaces:
+
+const text = 'Working with Strings';
+let spacesCount = 0;
+
+for (let char of text) {
+  // counting the number of spaces in the string
+  if (char === ' ') {
+    spacesCount++;
+  }
+}
+
+console.log(spacesCount); // 2
+
+Removing Characters from a String
+We can't modify an existing string, but we can create a new string and fill it with the desired characters. Here's a loop that copies all characters to a new string except spaces:
+
+const text = 'Working with Strings';
+let result = ''; 
+
+for (let char of text) {
+  if (char !== ' ') {
+    // adding everything except spaces
+    result += char;
+  }
+}
+
+console.log(result); // 'WorkingwithStrings'
+
+Creating a Reversed String
+To create a string with letters in reverse order, we can iterate through the input string by indices from the end:
+
+const name = 'String';
+let reversed = '';
+
+for (let i = name.length - 1; i >= 0; i--) {
+  reversed += name[i];
+}
+
+console.log(reversed); // 'gnirtS'
+
+Alternatively, we can iterate through the letters in normal order but add them to the beginning instead of the end:
+
+const name = 'String';
+let reversed = '';
+
+for (let char of name) {
+  // adding each character before those already added
+  reversed = char + reversed;
+}
+
+console.log(reversed); // 'gnirtS'
+
+Replacing Characters Using a Loop
+Sometimes while working with strings, we may need to replace spaces with other characters, like hyphens. This can be useful when creating URL slugs. A for loop will be perfect for this purpose:
+
+let title = 'Working with Strings';
+let result = '';
+
+for (let i = 0; i < title.length; i++) {
+  if (title[i] === ' ') {
+    result += '-';
+  } else {
+    result += title[i];
+  }
+}
+
+console.log(result); // 'Working-with-Strings'
+
+The same task can be accomplished with a for of loop:
+
+

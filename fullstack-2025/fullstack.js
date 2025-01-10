@@ -304,4 +304,51 @@ function replaceSpaces(input) {
 }
 result = replaceSpaces('Hello F uckk cc');
 console.log(result);
-//
+/*
+Write a function replaceA that:
+
+Takes a string input.
+Replaces all a and A letters with *.
+Returns the resulting string.
+*/
+
+function replaceA(input) {
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] === 'a') {
+            result = result + '*';
+        } else if (input[i] === 'A') {
+            result = result + '*';
+        } else {
+            result = result + input[i];
+        }
+    }
+    return result;
+}
+result = replaceA('Hello FaaAuckk cc');
+console.log(result);
+/*
+Implement the countMs function that:
+Takes the text string
+Returns the number of uppercase M and lowercase m letters combined.
+*/
+function countMs(text) {
+    let sum = 0;
+    for (let i = 0; i < text.length; i++) {
+        if ((text[i] === 'm') || ((text[i] === 'M'))) {
+            sum = sum + 1;
+        } else {
+            sum === sum + 0;
+        }
+    }
+    return sum;
+}
+sum = countMs('Hello MmFaaAuckk cc');
+console.log(sum);
+// convert string input to lower Case
+function convertToLowerCase(input) {
+    input = input.toLowerCase();
+    return input;
+}
+input = convertToLowerCase('GHHS');
+console.log(input);

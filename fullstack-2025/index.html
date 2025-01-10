@@ -76,23 +76,12 @@
         //     }
         // }
         // 
-
-        function replaceSpaces(input) {
-            let result = '';
-            for (let i = 0; i < input.length; i++) {
-                if (input[i] === ' ') {
-                    result = result + '-';
-                } else {
-                    result = result + input[i];
-                }
-            }
-            //console.log(result);
-            return result;
+        function convertToLowerCase(input) {
+            input = input.toLowerCase();
+            return input;
         }
-        result = replaceSpaces('Hello dwdw ded F uckk cc');
-        console.log(result);
-
-
+        input = convertToLowerCase('GHHS');
+        console.log(input);
     </script>
 </body>
 

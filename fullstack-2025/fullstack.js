@@ -352,3 +352,63 @@ function convertToLowerCase(input) {
 }
 input = convertToLowerCase('GHHS');
 console.log(input);
+/*
+Takes a string input.
+Returns the contents of the string in UPPERCASE.
+*/
+function convertToUpperCase(input) {
+    input = input.toUpperCase();
+    return input;
+}
+input = convertToUpperCase('skfkdk');
+console.log(input);
+/*
+Takes a string input.
+Replaces every instance of - with a space.
+Returns the resulting string.
+*/
+function restoreSpaces(input) {
+    input = input.replaceAll('-', ' ');
+    return input;
+}
+input = restoreSpaces('skfk-d-k');
+console.log(input);
+/*
+Create a isSubstring function that:
+
+Takes two strings, phrase and part.
+Returns the following:
+true, if phrase contains part.
+false, if phrase does not contain part
+*/
+function isSubstring(phrase, part) {
+    if (phrase.includes(part)) { return true; }
+    else {
+        return false;
+    }
+    ;
+}
+phrase = isSubstring('Hello', 'al');
+console.log(phrase)
+/**
+ * Create a function getPosition that:
+
+Takes two strings: text and word.
+Returns the index of the first word that occurs in text.
+If word isn't found in text, the functon should return -1.
+ */
+function getPosition(text, word) {
+    if (text.indexOf(word)) { return text.indexOf(word); }
+    else {
+        return -1;
+    }
+    ;
+}
+text = getPosition('Hello World', 'World');
+console.log(text)
+/*
+Write a function countLetters, which should:
+
+Accept a string input.
+Return the letter count of the string.
+*/

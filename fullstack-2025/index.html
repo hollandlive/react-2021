@@ -80,7 +80,7 @@
             let charCount = 0;
 
             for (let i = 0; i < input.length; i++) {
-                // Check if the character is not a space and a LETTER
+                // Check if the character is not a space
                 if (input[i] !== ' ' && (input[i].toLowerCase() !== input[i].toUpperCase())) {
                     charCount++; // Increment the count for valid characters
                 }
@@ -88,9 +88,8 @@
 
             return charCount;
         }
-
-        let text = countLetters('helloworld - jjfg**');
-        console.log(text); // Output: 10
+        input = countLetters('dde de** wdd-dd');
+        console.log(input);
     </script>
 </body>
 

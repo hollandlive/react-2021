@@ -412,3 +412,33 @@ Write a function countLetters, which should:
 Accept a string input.
 Return the letter count of the string.
 */
+function countLetters(input) {
+    let charCount = 0;
+
+    for (let i = 0; i < input.length; i++) {
+        // Check if the character is not a space
+        if (input[i] !== ' ' && (input[i].toLowerCase() !== input[i].toUpperCase())) {
+            charCount++; // Increment the count for valid characters
+        }
+    }
+
+    return charCount;
+}
+input = countLetters('dde de** wdd-dd');
+console.log(input);
+/*
+Add a loop inside the getSum function to 
+calculate the sum of the numbers stored in the numbers array */
+
+function getSum(numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    return sum;
+
+}
+
+num = getSum([5, 7, 9]);
+console.log(num);

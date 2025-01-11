@@ -539,3 +539,181 @@ console.log(
   title.indexOf('with'), // 8
   title.indexOf('Strings'), // 13
 );
+
+Working with Arrays
+In real life, we often encounter large amounts of homogeneous data: words in a dictionary, grades in a journal, products in a store, books on a shelf, and so on. As we've previously discussed, arrays in JavaScript are used to store such data in a single variable, and today, we'll consider a few of their applications.
+
+Sum of Numbers in an Array
+A common operation with arrays is summing numbers. For example, if an array contains the prices of items in a shopping cart, we can calculate the total cost. Let's calculate the sum of numbers in an array using a for loop:
+
+const prices = [10, 20, 30, 40, 50];
+const totalPrice = getSum(prices);
+
+console.log(totalPrice);
+
+function getSum(values) {
+  let sum = 0;
+
+  for (let i = 0; i < values.length; i++) {
+    sum += values[i];
+  }
+
+  return sum;
+}
+
+Here's how above code works:
+
+We call the getSum function and pass our prices array to it.
+Inside the function, we declare a sum variable where the total of the numbers will accumulate.
+Using a for loop, we iterate over the array elements and add the current values[i] to the sum.
+Once the loop concludes, we return the value of sum.
+The same can be done with a for of loop:
+
+const prices = [10, 20, 30, 40, 50];
+const totalPrice = getSum(prices);
+
+console.log(totalPrice);
+
+function getSum(values) {
+  let sum = 0;
+
+  for (const value of values) {
+    sum += value;
+  }
+
+  return sum;
+}
+
+Average Value
+To find the average value of numbers in an array, we need to compute the sum of all elements and divide it by the number of elements. For example:
+
+function getAverage(values) {
+  let sum = 0;
+
+  for (const value of values) {
+    sum += value;
+  }
+
+  return sum / values.length;
+}
+
+const prices = [10, 20, 30, 40, 50];
+const averagePrice = getAverage(prices);
+
+console.log(averagePrice);
+
+However, if the array is empty, dividing by 0 will result in a computational error NaN. This case should be handled separately at the beginning of the function, like so:
+
+function getAverage(values) {
+  if (values.length === 0) {
+    return 0;
+  }
+
+  // the rest of the code is the same as before
+}
+
+Minimum and Maximum Value
+Sometimes, we need to find the smallest or largest value in an array. Let's find the smallest value, e.g.:
+
+function getMin(values) {
+  if (values.length === 0) {
+    return 0;
+  }
+
+  let min = values[0];
+
+  for (const
+value of values) {
+if (value < min) {
+min = value;
+}
+}
+
+return min;
+}
+
+const prices = [10, 20, 30, 40, 50];
+const minPrice = getMin(prices);
+
+console.log(minPrice); // Outputs the minimum value in the array
+
+Working with Arrays of Strings
+Performing operations on arrays of strings can be useful when dealing with lists of names, products, or any other textual information.
+
+Converting a String into an Array (split)
+The split method "slices" a string into separate parts based on a specified delimiter and returns an array of these parts. Said delimiter is provided as an argument to the split method. If the delimiter is an empty string, we get an array of individual characters:
+
+const text = 'one two three four five';
+const chars = text.split('');
+
+console.log(chars); // ['o', 'n', 'e', ..., 'f', 'i', 'v', 'e']
+
+If the delimiter is a space ' ', the string is split into separate words:
+
+const text = 'one two three four five';
+const words = text.split(' ');
+
+console.log(words); // ['one', 'two', 'three', 'four', 'five']
+
+A delimiter can also be a string of multiple characters:
+
+const text = 'one two three four five';
+const words = text.split(' f');
+
+console.log(words); // ['one two three', 'our', 'ive']                  
+
+Filtering Array Elements
+Sometimes, we must create a new array with elements from the original array which meet a certain condition. For example, to filter out short words and compile them into a new array:
+
+function getShortWords(words, maxLength) {
+  let results = [];
+  
+  for (const word of words) {
+    if (word.length <= maxLength) {
+      results.push(word);
+    }
+  }
+  
+  return results;
+}
+
+const text = 'one two three four five';
+const words = text.split(' ');
+
+console.log(
+  getShortWords(words, 4) // Filters words with 4 or fewer characters
+);
+
+Creating a New Array from an Existing One
+Using a loop, we can receive an array of data (input array) and create a new array (resulting array). To exemplify, here's a function that takes an array of words and returns an array of their lengths:
+
+function getWordsLengths(words) {
+  const result = [];
+  
+  for (const word of words) {
+    result.push(word.length);
+  }
+  
+  return result;
+}
+
+// Returns [3, 3, 5, 4, 4]
+getWordsLengths(['one', 'two', 'three', 'four', 'five']);
+
+Joining Array Elements into a String (join)
+We use the join method to concatenate all elements of an array into a single string. This method takes one argument, a delimiter (symbol or string), to be inserted between the joined array elements:
+
+const fruits = ['apple', 'banana', 'cherry', 'date'];
+const joinedString = fruits.join(', '); // The delimiter is a comma and a space
+
+console.log(joinedString); // Outputs 'apple, banana, cherry, date' to the console
+
+Searching for Elements in an Array
+To check if an array contains a specific element, you can use the includes and indexOf methods. They function similarly to their string method counterparts:
+
+const words = ['apple', 'banana', 'cherry', 'date'];
+
+console.log(words.includes('apple')); // Use `includes` to search for an element in the array, result — `true`
+console.log(words.indexOf('apple')); // Use `indexOf` to find the index where the desired element starts, result — `0`
+
+💡 These methods are useful when we need to find an element in an array. For more complex search criteria, we can use a loop and check conditions inside it using if.

@@ -78,6 +78,38 @@
         // 
 
 
+        // function checkNumber(n) {
+        //     if (n > 0) {
+        //         return n;
+        //     }
+        // }
+        // const res = checkNumber(5);
+        // console.log(res);
+
+        function checkNumber(n) {
+            let res = [];
+            if (n > 0) {
+                res[0] = true;
+            }
+            else {
+                res[0] = false;
+            }
+            if (n % 2 === 0) {
+                res[1] = true;
+            } else {
+                res[1] = false;
+            }
+            if (n % 10 === 0) {
+                res[2] = true;
+            } else {
+                res[2] = false;
+            }
+            //let joinedString = res.join(', ');
+            return res;
+        }
+        const res = checkNumber(20);
+        console.log(res);
+
     </script>
 </body>
 

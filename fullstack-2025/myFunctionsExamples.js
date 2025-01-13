@@ -630,11 +630,10 @@ Takes a values array and a value search value
 Returns the index of the first value occurrence in the array.
 Returns -1, if value isn't found in the array. */
 function getFirstPosition(values, value) {
-    let firstIndex = values.indexOf(value));;
+    let firstIndex = values.indexOf(value);;
     return firstIndex;
 }
 const values = ['apple', 'pear'];
 const value = 'apple';
 let firstIndex = getFirstPosition(values, value);
 console.log(firstIndex);
-

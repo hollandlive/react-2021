@@ -86,30 +86,45 @@
         // const res = checkNumber(5);
         // console.log(res);
 
-        function checkNumber(n) {
-            let res = [];
-            if (n > 0) {
-                res[0] = true;
-            }
-            else {
-                res[0] = false;
-            }
-            if (n % 2 === 0) {
-                res[1] = true;
-            } else {
-                res[1] = false;
-            }
-            if (n % 10 === 0) {
-                res[2] = true;
-            } else {
-                res[2] = false;
-            }
-            //let joinedString = res.join(', ');
-            return res;
-        }
-        const res = checkNumber(20);
-        console.log(res);
+        // function checkNumber(n) {
+        //     let res = [];
+        //     if (n > 0) {
+        //         res[0] = true;
+        //     }
+        //     else {
+        //         res[0] = false;
+        //     }
+        //     if (n % 2 === 0) {
+        //         res[1] = true;
+        //     } else {
+        //         res[1] = false;
+        //     }
+        //     if (n % 10 === 0) {
+        //         res[2] = true;
+        //     } else {
+        //         res[2] = false;
+        //     }
+        //     //let joinedString = res.join(', ');
+        //     return res;
+        // }
+        // const res = checkNumber(20);
+        // console.log(res);
 
+
+        function getArraysSum(arr1, arr2) {
+            arr1 = [];
+            arr2 = [];
+            if (arr1.length !== arr2.length) {
+                return 0;
+            } else {
+                return 10;
+            }
+        }
+        const arr3 = [10, 29];
+        const arr4 = [10, 29, 34];
+
+        const res1 = getArraysSum(arr3, arr4);
+        console.log(res1);
     </script>
 </body>
 

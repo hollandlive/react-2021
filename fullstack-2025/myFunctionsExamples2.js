@@ -41,3 +41,26 @@ Returns an array of integers from 1 to N inclusive.
 createArray(1); // [1]
 createArray(3); // [1, 2, 3]
 createArray(0); // [] */
+
+function createArray(N) {
+    let res = [];
+    if (N === 0) {
+        return res;
+    } else {
+        for (let i = 1; i <= N; i++) {
+            res.push(i);
+        }
+        return res;
+
+    }
+}
+const res11 = createArray(8);
+console.log(res11);
+
+/* Array Plus Array
+Create a getArraysSum function that:
+Accepts two arrays of numbers; both arrays should be of equal length.
+Returns the sum of their elements. */
+function getArraysSum(arr1, arr2) {
+    // write code here
+}

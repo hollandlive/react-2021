@@ -1,9 +1,9 @@
-// const name = 'John';
-// const age = 30;
+const name = 'John';
+const age = 30;
 
-// // concatenation
-// const concatenationGreeting = 'Hello! My name is ' + name + ' and I am ' + age + '.';
-// console.log(concatenationGreeting); // 'Hello! My name is John and I am 30.'
+// concatenation
+const concatenationGreeting = 'Hello! My name is ' + name + ' and I am ' + age + '.';
+console.log(concatenationGreeting); // 'Hello! My name is John and I am 30.'
 
 // interploation
 const interpolationGreeting = `Hello! My name is ${name} and I am ${age}.`;
@@ -442,3 +442,72 @@ function getSum(numbers) {
 
 num = getSum([5, 7, 9]);
 console.log(num);
+/*Write a function getLargestNumber that:
+Takes a non-empty array numbers.
+Returns the largest number stored in this array */
+function getLargestNumber(values) {
+    if (values.length === 0) {
+        return 0;
+    }
+    let max = values[0];
+    for (const value of values) {
+        if (value > max) {
+            max = value;
+        }
+
+    }
+    return max;
+}
+const num = [5, 7, 9, 33];
+const max = getLargestNumber(num);
+console.log(max);
+/*Write a function splitWords that:
+
+Takes a text string with words, each separated by a single space.
+Returns an array of individual words.*/
+function splitWords(text) {
+    const arrayText = text.split(' ');
+    return arrayText;
+}
+const text = 'text bbb bbebe';
+textArray = splitWords(text);
+console.log(textArray);
+/* Write a function joinWords that:
+
+Accepts an array of strings words, and a joining character glue.
+Returns a string with all words elements joined together with glue. */
+function joinWords(words, glue) {
+    const joinedWords = words.join(glue);
+    return joinedWords;
+}
+const text1 = ['apple', 'banana'];
+const glue = '---';
+const textString = joinWords(text1, glue);
+console.log(textString);
+/* Write a function checkWord that:
+
+Takes an array of strings words and a string word.
+If word is found in the words array, returns true, otherwise — returns false. */
+function checkWord(words, word) {
+    let include = words.includes(word);
+    return include;
+}
+const words = ['apple', 'pear'];
+const word = 'apple';
+let include = checkWord(words, word);
+console.log(include);
+/*
+Write a function getFirstPosition that:
+
+Takes a values array and a value search value
+Returns the index of the first value occurrence in the array.
+Returns -1, if value isn't found in the array. */
+function getFirstPosition(values, value) {
+    let firstIndex = values.indexOf(value));;
+    return firstIndex;
+}
+const values = ['apple', 'pear'];
+const value = 'apple';
+let firstIndex = getFirstPosition(values, value);
+console.log(firstIndex);
+

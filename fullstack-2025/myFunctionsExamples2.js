@@ -61,6 +61,25 @@ console.log(res11);
 Create a getArraysSum function that:
 Accepts two arrays of numbers; both arrays should be of equal length.
 Returns the sum of their elements. */
+
 function getArraysSum(arr1, arr2) {
-    // write code here
+    // arr1 = [];
+    // arr2 = [];
+    if (arr1.length !== arr2.length) {
+        return 0;
+    } else {
+        // return 10;
+        // let res = [];
+        let sum = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            sum = sum + arr1[i] + arr2[i];
+
+        }
+        return sum;
+    }
 }
+const arr3 = [10, 29];
+const arr4 = [10, 29];
+
+const res1 = getArraysSum(arr3, arr4);
+console.log(res1);

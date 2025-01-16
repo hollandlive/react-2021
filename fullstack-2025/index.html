@@ -111,8 +111,18 @@
         // console.log(res);
 
         function getDrinks(numberOfGuests) {
-            // write code here
+            //let drinksQuantity = 0;
+            let sum = 0;
+            for (let i = 1; i <= numberOfGuests; i++) {
+                sum += i;
+            }
+            return sum;
         }
+
+        const numberOfGuests = 3;
+        const res = getDrinks(numberOfGuests);
+        console.log(res);
+
 
     </script>
 </body>

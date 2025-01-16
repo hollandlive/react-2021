@@ -178,4 +178,14 @@ Returns the total number of drinks.
 💡 If there are 5 guests, then we need 15 drinks in 
 total (1 + 2 + 3 + 4 + 5 = 15); and if 10, then 55 drinks 
 (1 + 2 + 3 + ... + 10 = 55).*/
-
+function getDrinks(numberOfGuests) {
+    //let drinksQuantity = 0;
+    let sum = 0;
+    for (let i = 1; i <= numberOfGuests; i++) {
+        sum += i;
+    }
+    return sum;
+}
+const numberOfGuests = 3;
+const res = getDrinks(numberOfGuests);
+console.log(res);

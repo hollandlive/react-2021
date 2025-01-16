@@ -187,5 +187,58 @@ function getDrinks(numberOfGuests) {
     return sum;
 }
 const numberOfGuests = 3;
-const res = getDrinks(numberOfGuests);
+const res22 = getDrinks(numberOfGuests);
 console.log(res);
+
+/* Get Drinks With Step
+Our drinking game was a bit too much for the guests, 
+o the host changed the rules. He asked the newlyweds for a step number (a positive integer), and used it to limit the number of toasts. Now, the toasts are made by:
+The first guest.
+The guest who arrives at the given interval (step).
+Each guest participates in the drinking, e.g.:
+If step = 1, every incoming guest makes a toast — as before.
+If step = 2, the 1st, 3rd, 5th guests, and so on, make toasts.
+If step = 3, it's the 1st, 4th, 7th, 10th guests, and so forth. */
+function getDrinksWithStep(numberOfGuests, step) {
+    //let drinksQuantity = 0;
+
+    let sum = 0;
+    for (let i = 1; i <= numberOfGuests; i += step) {
+        sum += i;
+    }
+    return sum;
+}
+const step = 3
+const numberOfGuests = 18;
+const res = getDrinksWithStep(numberOfGuests, step);
+console.log(res);
+
+/*Is Sorted
+Let's teach our robots how to sort boxes in the warehouse. 
+All boxes have numbers, and the robots learn to sort them in 
+ascending order. But sorting isn't easy, and sometimes mistakes 
+happen. Therefore, we'll check whether the robot sorted the boxes 
+correctly.
+Create the isSorted function that:
+Accepts the array of numbers — boxNumbers/
+Returns true if all numbers are in ascending order or false otherwise.
+💡 Take into account the fact that numbers in the array can repeat.*/
+function isSorted(boxNumbers) {
+
+    for (let i = 1; i < boxNumbers.length; i++) {
+        if (boxNumbers[i] < boxNumbers[i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+const boxNumbers = [0, 1, 9, 4, 5]
+const res223 = isSorted(boxNumbers);
+console.log(res223);
+
+/* Remove Vowels
+Write the removeVowels function that:
+Takes the doc string.
+Returns it with all vowels removed.
+💡 Vowels are the letters a, e, i, o, u, y in 
+lowercase and uppercase. */

@@ -242,3 +242,60 @@ Takes the doc string.
 Returns it with all vowels removed.
 💡 Vowels are the letters a, e, i, o, u, y in 
 lowercase and uppercase. */
+function removeVowels(doc) {
+    let result = '';
+    for (let i = 0; i < doc.length; i++) {
+        if (
+            doc[i] !== 'a' &&
+            doc[i] !== 'e' &&
+            doc[i] !== 'i' &&
+            doc[i] !== 'o' &&
+            doc[i] !== 'u' &&
+            doc[i] !== 'y' &&
+            doc[i] !== 'A' &&
+            doc[i] !== 'E' &&
+            doc[i] !== 'I' &&
+            doc[i] !== 'O' &&
+            doc[i] !== 'U' &&
+            doc[i] !== 'Y'
+        ) { result += doc[i]; };
+    }
+    return result;
+}
+const doc51 = 'ede dscwcw';
+console.log(removeVowels(doc51));
+
+/*Compare Robots
+After testing the robots and upgrading the slower ones, Mate Post delivery service is interested in purchasing a dozen robots from us for citywide deliveries. They need robots capable of carrying the highest total weight per day.
+Create the compareRobots function** that takes two arrays:
+
+firstRobotResults — the weight of goods delivered in a day by the first robot.
+secondRobotResults — the weight of goods delivered in a day by the second robot.
+Determine which robot can carry more weight and return the corresponding recommendation:
+
+'First robot for sale!', if the first robot carries more weight.
+'Second robot for sale!', if the second robot carries more weight.
+'Both robots for sale!', if the robots carry the same weight.
+Example
+compareRobots([12, 4, 13], [1, 1, 4, 5, 12]); // 'First robot for sale!' (29 > 23)
+compareRobots([9, 7, 9], [1, 3, 4, 5, 12]); // 'Both robots for sale!' (25 = 25)
+compareRobots([1, 3, 4], [1, 1, 4, 5]) */
+function compareRobots(firstRobotResults, secondRobotResults) {
+    let sumFirstRobot = 0;
+    let sumSecondRobot = 0;
+    for (let i = 0; i < firstRobotResults.length; i++) {
+        sumFirstRobot = sumFirstRobot + firstRobotResults[i];
+    }
+    for (let i = 0; i < secondRobotResults.length; i++) {
+        sumSecondRobot = sumSecondRobot + secondRobotResults[i];
+    }
+    if (sumFirstRobot > sumSecondRobot) {
+        return 'First robot for sale!';
+    } else if (sumFirstRobot < sumSecondRobot) {
+        return 'Second robot for sale!';
+    } else {
+        return 'Both robots for sale!';
+    }
+}
+res1111 = compareRobots([9, 7, 9], [1, 3, 4, 5, 12, 17]);
+console.log(res1111);

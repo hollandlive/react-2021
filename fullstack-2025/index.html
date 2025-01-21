@@ -154,27 +154,79 @@
         // res1144 = getLocation1(coord, movez);
         // console.log(res1144);
 
-        function getLocation(coordinates, commands) {
-            let x = coordinates[0];
-            let y = coordinates[1];
-            for (let i = 0; i < commands.length; i++) {
-                if (commands[i] === 'left') {
-                    x = x - 1;
-                } else if (commands[i] === 'right') {
-                    x = x + 1;
-                } else if (commands[i] === 'forward') {
-                    y = y + 1;
-                } else if (commands[i] === 'back') {
-                    y = y - 1;
-                } else {
-                    return 'wrong command';
-                }
+        // function getLocation(coordinates, commands) {
+        //     let x = coordinates[0];
+        //     let y = coordinates[1];
+        //     for (let i = 0; i < commands.length; i++) {
+        //         if (commands[i] === 'left') {
+        //             x = x - 1;
+        //         } else if (commands[i] === 'right') {
+        //             x = x + 1;
+        //         } else if (commands[i] === 'forward') {
+        //             y = y + 1;
+        //         } else if (commands[i] === 'back') {
+        //             y = y - 1;
+        //         } else {
+        //             return 'wrong command';
+        //         }
 
+        //     }
+        //     return [x, y];
+        // }
+        // let coordinates = [10, 20];
+        // console.log(getLocation(coordinates, ['st', 'ss']))
+
+        // let gameBoard = [0,1,2,3,4,5,6,7,8];
+        // function randomNumber() {
+        //     return random = Math.floor(Math.random() * 9);
+        // }
+        // let x = randomNumber();
+        //  console.log(x);
+
+
+        // function removeRandomItemsWithShuffle(array) {
+        //     // Shuffle the array using Fisher-Yates Algorithm
+        //     for (let i = array.length - 1; i > 0; i--) {
+        //         const randomIndex = Math.floor(Math.random() * (i + 1));
+        //         [array[i], array[randomIndex]] = [array[randomIndex], array[i]];
+        //     }
+
+        //     // Remove items from the end until empty
+        //     while (array.length > 0) {
+        //         const removedItem = array.pop();
+        //         console.log(`Removed Item: ${removedItem}`);
+        //         console.log(`Remaining Array: ${array}`);
+        //     }
+        //     console.log("The array is now empty.");
+        // }
+
+        // // Example usage
+        // const myArray = [1, 2, 3, 4, 5];
+        // removeRandomItemsWithShuffle(myArray);
+        let gameBoard = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+        // computer starts the game and choose the random number 
+        function computerPlays(gameBoard) {
+            for (let i = gameBoard.length - 1; i > 0; i--) {
+                const computerDraws = Math.floor(Math.random() * (i + 1));
+                gameBoard[computerDraws] = 0;
+
+                // let computerNumber = delete gameBoard[computerDraws];
+                return gameBoard;
             }
-            return [x, y];
         }
-        let coordinates = [10, 20];
-        console.log(getLocation(coordinates, ['st', 'ss']))
+        // human continues play and chose his number
+        function humanPlays(gameBoard) {
+            let humanNumber = 6;
+            gameBoard[humanNumber] = 'X';
+            // delete gameBoard[humanNumber];
+            //return humanNumber;
+            return gameBoard;
+        }
+
+
+        console.log(computerPlays(gameBoard) + 'dd');
+        console.log(humanPlays(gameBoard) + 'num');
+        // console.log();
 
 
     </script>

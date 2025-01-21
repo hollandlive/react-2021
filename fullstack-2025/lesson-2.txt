@@ -1,0 +1,190 @@
+Writing Guidelines
+Our code should always be understandable.
+Our code should be shortened only if we can keep it uncomplicated.
+When commenting our code, comments should explain why a decision was made, not how it works (which should be clear from the code itself).
+We should always remove redundant code (don't leave code that's commented out).
+Commands
+We will write each command on a new line, so that its boundaries are easier to find.
+To avoid ambiguity in the code, we will end each command with a semicolon ;.
+We should strive for line lengths that don't exceed 80 characters for comfortable readability.
+Code Blocks
+Always enclose the bodies of loops, functions, and if blocks in curly braces { }:
+
+// good
+if (condition) {
+  result += 123;
+}
+
+for (let i = 0 ; i < text.length; i++) {
+  result = text[i] + result;
+}
+
+// bad
+if (condition) result += 123;;
+
+for (let i = 0 ; i < text.length; i++)
+  result = text[i] + result;
+
+Place the opening bracket { on the same line as the start of the block.
+Place the closing bracket } on the line following the last command of the block.
+// good
+if (condition) {
+  result = 123;
+} else {
+  result = 456;
+}
+
+function sum(a, b) {
+  return a + b;
+}
+
+// bad
+if (condition) { result = 123; }
+else { result = 456; }
+
+function sum(a, b)
+{
+  return a + b;
+}
+
+Indentation
+Nested code should be indented with two spaces more than the outer code:
+
+// good
+if (condition) {
+  console.log(456)
+  console.log(123)
+}
+
+// bad
+if (condition) {
+    console.log(456)
+console.log(123)
+}
+
+We should separate logical blocks at the same nesting level with an empty line. This includes functions, loops, if blocks, return statements, variable blocks, and groups of related commands:
+
+// good
+function test() {
+  let x = 10;
+
+  while (x > 5) {
+    x--;
+    console.log(x);
+  }
+
+  return x;
+}
+
+// bad
+function test() {
+
+  let x = 10;
+  while (x > 5) {
+  
+    x--;
+
+    console.log(x);
+
+  }
+  return x;
+
+}
+
+Variables
+We will be declaring variables using let or const, but not var, which is an outdated method. Each variable should be declared separately.
+
+// good
+let x = 1;
+let y = 2;
+
+// bad
+let x = 1, y = 2;
+
+We should write variable and function names in camelCase for variable and function names. Avoid using underscores _, and make sure all words after the first start with a capital letter:
+
+// good
+let userName = '';
+
+// bad 
+let user_name = '';
+let UserName = ''; // can be used in some situations
+
+Single-letter variables are permissible only where their meaning is clear e.g.:
+
+As an index in a loop;
+For mathematical variables (x, y, a, b, c);
+If it significantly shortens and simplifies the code, making it more understandable.
+Variable names should be written in plain English and be descriptive. This means it should be clear from the name what the variable is storing. For boolean values, use verbs in the third form, passive voice, or modal verbs (isLoaded, loaded, hasEnoughMoney, canBuy). For arrays, use nouns in the plural. Do not use prefixes like arr, obj, etc. — the name should be clear without them. Function names should start with a verb and describe what they do.
+
+💡 Event handlers are the exception to these rules, as they have specific names like onClick or submitHandler – but we will discuss them later.
+
+What NOT To Do: Examples of Poor Coding Style
+DON'T use abstract variable and function names (obj, data, value, item, elem, etc.) if you can help it.
+DON'T use similar variable names (num1 and num2), as they can easily lead to typos.
+DON'T reuse variables and parameters for new values, making it unclear what they currently store.
+DON'T create a function that's doing something more or something else than its name would suggest (causing a side effect).
+Conditional (Ternary) Operator
+Sometimes it's necessary to assign different values to a variable based on a condition. This can be done using if and else:
+
+let age = 23;
+let result = '';
+
+// condition
+if (age >= 18) {
+  // value1
+  result = 'Adult';
+} else {
+  // value2
+  result = 'Not Adult';
+}
+
+console.log(result); // 'Adult'
+
+However, this may be problematic when our programs gets larger. The construct can become fairly large, and it prevents us from using use const for the result variable, as we need to assign a new value inside the if - else block.
+
+A shorter and more convenient option is the conditional (ternary) operator. Let's look at an example:
+
+let age = 23;
+const result = age >= 18 ? 'Adult' : 'Not Adult';
+
+console.log(result); // 'Adult'
+
+If the condition age >= 18 is met (as in our example), then the value 'Adult' following the ? is returned. Otherwise, the statements returns 'Not Adult'.
+
+For clarity, we can enclose the expression's condition in parentheses:
+
+const result = (age >= 18) ? 'Adult' : 'Not Adult';
+
+If the expression is lengthy, we can break the values into multiple lines:
+
+const result = (age >= 18)
+  ? 'Adult'
+  : 'Not Adult';
+
+This operator is often called ternary, as it's the only operator that uses three parts.
+
+JSDoc
+Starting from this lesson, to improve auto-complete features of our IDE, we will be adding comments in the JSDoc format to each function:
+
+/**
+ * @param {number} a
+ * @param {number} b
+ *
+ * @returns {string}
+ */
+function getSumText(a, b) {
+  return `${a} + ${b} = ${a + b}`;
+}
+
+The @param {type} name comment tells the editor that the parameter named name should be of the type specified in curly brackets {}. This can be number, string, boolean, null, undefined for primitive values, or number[] for an array of numbers, string[] for an array of strings, etc.
+
+You can also specify two or more types using the pipe character |, indicating that the parameter can be one of those types. For example:
+
+/**
+ * @param {number|string} id
+ */
+function check(id) {}
+
+Similarly, the type after @returns {type} suggests the type of value that the function should return.
+

@@ -32,19 +32,19 @@
             return availableMoves;
         }
 
-        function getIndexes(gameCells) {
-            const t = document.getElementById("table"),
-                tableRows = t.getElementsByTagName("tr"),
-                r = [];
+        // function getIndexes(gameCells) {
+        //     const t = document.getElementById("table"),
+        //         tableRows = t.getElementsByTagName("tr"),
+        //         r = [];
 
-            for (let i = 0, len = tableRows.length; i < len; i++) {
-                tds = tableRows[i].getElementsByTagName('td');
-                for (j = 0, jlen = tds.length; j < jlen; j++) {
-                    r.push(tds[j]);
-                }
-            }
-            return i;
-        }
+        //     for (let i = 0, len = tableRows.length; i < len; i++) {
+        //         tds = tableRows[i].getElementsByTagName('td');
+        //         for (j = 0, jlen = tds.length; j < jlen; j++) {
+        //             r.push(tds[j]);
+        //         }
+        //     }
+        //     return i;
+        // }
 
         // Human plays at a fixed position (replace with user input later)
         function humanPlays(gameBoard) {
@@ -55,18 +55,10 @@
             //  console.log(humanNumber);
             return gameBoard;
         }
-
-
         // function computerPlays(gameBoard) { };
         console.log(computerPlays(gameBoard) + '  01');
         console.log(humanPlays(gameBoard) + '  02');
-        console.log(computerPlays(gameBoard) + '  03');
-        console.log(humanPlays(gameBoard) + '  xx');
-        // console.log(computerPlays(gameBoard) + '  04');
-
-        // console.log();
-
-
+        console.log(getAvailableMoves(gameBoard));
     </script>
     <div class="container">
         <table>

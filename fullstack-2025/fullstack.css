@@ -1,4 +1,22 @@
 .container {
     display: grid;
     place-items: center;
+    padding-top: 100px;
+}
+
+table,
+tbody,
+th,
+td {
+    border: 1px solid black;
+}
+
+td {
+    padding: 30px;
+}
+
+.buttons {
+    padding-top: 20px;
+    display: inline-block center;
+    text-align: center;
 }

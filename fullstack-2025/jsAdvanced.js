@@ -17,3 +17,41 @@ const newEvent = 'created a new car';
 const eventDate = '2019.10.10';
 const eventMessage = `${userName} ${newEvent} in ${eventDate}`;
 
+function getNumbersEquality(a, b) {
+    if (a > b) {
+        return 'a > b';
+    }
+
+    if (a < b) {
+        return 'a < b';
+    }
+
+    return 'a and b are equal';
+}
+
+/*remove else
+
+
+In this task, everything is already written for us. We only need to refactor the code! Your task is to:
+
+Remove the declared variable let result. You're not allowed to replace it by declaring new ones.
+Get rid of the keyword else and replace it with return, making sure that the logic of the function is not affected.
+Do not use the ternary operator.*/
+/**
+ * @param {number} a
+ * @param {number} b
+ *
+ * @returns {string}
+ */
+function getNumbersEquality(a, b) {
+    if (a > b) {
+        return 'a > b';
+    }
+
+    if (a < b) {
+        return 'a < b';
+    }
+
+    return 'a and b are equal';
+}
+

@@ -188,3 +188,177 @@ function check(id) {}
 
 Similarly, the type after @returns {type} suggests the type of value that the function should return.
 
+Working with Numbers
+As software developers, we often need to perform operations on numbers: round them, convert user inputs into numbers, generate random numbers, and so on. In this lesson, we'll practice executing these routine tasks.
+
+Numeric Literals
+In JavaScript, numbers can be either integers or decimals, and can be represented in various number systems or formats. Here's how you can represent the decimal number 123 in different systems:
+
+let dec = 123; // typical decimal (Base-10) system, requires no prefix
+let bin = 0b1111011; // `0b` is the prefix for binary (Base-2). The actual number value is '1111011`
+let oct = 0o173; // `0o` is the prefix for octal (Base-8). The actual number value is `173`
+let hex = 0x7b; // `0x` is the prefix for hexadecimal (Base-16). The actual number value is `7b`
+
+We will be mostly working with decimal numbers in our projects. They can also be expressed in several ways:
+
+let x = 15 // An integer decimal number
+let y = 0.52 // A decimal number with a fractional part
+let z = 3.14e6 // `e6` means multiply by `10` to the `6th` power, so the number is `3140000` 
+
+Binary and Hexadecimal Numbers
+Our familiar decimal system is positional, so each digit is multiplied by 10 to the corresponding power (position from the right, starting from 0). Consider the number 345:
+
+345 === 3 * (10 ** 2) + 4 * (10 ** 1) + 5 * (10 ** 0)
+345 === (3 * 100) + (4 * 10) + (5 * 1)
+
+In the binary system, there are only digits 0 and 1, which need to be multiplied by 2 to the corresponding power:
+
+0b101101 === 1 * (2 ** 5) + 0 * (2 ** 4) + 1 * (2 ** 3) + 1 * (2 ** 2) + 0 * (2 ** 1) + 1 * (2 ** 0)
+0b101101 === (1 * 32) + (0 * 16) + (1 * 8) + (1 * 4) + (0 * 2) + (1 * 1)
+0b101101 === 32 + 8 + 4 + 1 === 45
+
+In the hexadecimal system, digits from 0 to 9 and letters A to F are used, where A = 10, B = 11, C = 12, D = 13, E = 14, and F = 15:
+
+0x9F2C = 9 * (16 ** 3) + 15 * (16 ** 2) + 2 * (16 ** 1) + 12 * (16 ** 0)
+0x9F2C = (9 * 4096) + (15 * 256) + (2 * 16) + (12 * 1)
+0x9F2C = 36864 + 3840 + 32 + 12 === 40748
+
+Infinity and NaN
+JavaScript has two special numeric values:
+
+Infinity is the mathematical infinity. It appears when dividing by 0 and is larger than any other number. There is also the opposite value -Infinity, which is smaller than any other number. The function isFinite() converts its argument to a number and returns true if it's a regular number, not NaN or Infinity.
+
+NaN (Not a Number) is a special numerical value that's returned if the program is trying to calculate something that logically cannot be calculated. It may pop up, for example, when we divide 0 by 0, or divide a number by a string that can't be converted to a number (346 / 'apple'). The NaN value is unique in that it doesn't equal anything else – not even itself:
+
+console.log(NaN === NaN); // false
+
+There's also a function isNaN, which converts its argument to a number and determines whether it is NaN (not a number) or not:
+
+isNaN(NaN); // true
+isNaN(45.2); // false
+isNaN(Infinity); // false
+isNaN('123'); // false
+isNaN('0x123'); // false
+isNaN('12 hello'); // true
+
+Rounding Values
+Very often, calculations result in fractional numbers, not integers. We can round these up or down. To do so, we use the following commands:
+
+Math.round(x) — rounds x to the nearest integer (up or down):
+console.log(
+  Math.round(10.1), // 10
+  Math.round(10.5), // 11
+  Math.round(10.8), // 11
+  Math.round(-10.1), // -10
+  Math.round(-10.5), // -10
+  Math.round(-10.8), // -11
+);
+
+Math.floor(x) — rounds x down (to the nearest smaller integer):
+console.log(
+  Math.floor(10.1), // 10
+  Math.floor(10.5), // 10
+  Math.floor(10.8), // 10
+  Math.floor(-10.1), // -11
+  Math.floor(-10.5), // -11
+  Math.floor(-10.8), // -11
+);
+
+Math.ceil(x — rounds x up (to the nearest larger integer):
+console.log(
+  Math.ceil(10.1), // 11
+  Math.ceil(10.5), // 11
+  Math.ceil(10.8), // 11
+  Math.ceil(-10.1), // -10
+  Math.ceil(-10.5), // -10
+  Math.ceil(-10.8), // -10
+);
+
+Math.trunc(x) — removes the fractional part:
+console.log(
+  Math.trunc(10.1), // 10
+  Math.trunc(10.5), // 10
+  Math.trunc(10.8), // 10
+  Math.trunc(-10.1), // -10
+  Math.trunc(-10.5), // -10
+  Math.trunc(-10.8), // -10
+);
+
+x.toFixed(numberOfDigits) – converts a number to a string with a specified number of digits after the decimal point:
+console.log(
+  (3.14159).toFixed(0), // '3'
+  (3.14159).toFixed(2), // '3.14'
+  (3.14159).toFixed(3), // '3.142'
+  (3.14159).toFixed(4), // '3.1416'
+  (3.14).toFixed(4), // '3.1400'
+  (3).toFixed(4), // '3.0000'
+  (-3.14159).toFixed(4), // '-3.1416'
+);
+
+Generating Random Numbers
+The Math.random method returns a random number from 0 (inclusive) to 1 (exclusive):
+
+console.log(
+  Math.random(), // 0.6460395007021751
+  Math.random(), // 0.511311069945108
+  Math.random(), // 0.36258333704200685
+);
+
+To generate random integer numbers from 0 to n, we can multiply the result by n + 1 and round down (to the smaller integer):
+
+Math.floor(Math.random() * 11); // Random integer from 0 to 10 inclusive
+
+For random integers, ranging from min to max inclusive, we can generate a number from 0 to max - min, and then add min:
+
+Math.floor(Math.random() * (max - min + 1)) + min;
+Math.floor(Math.random() * (11 - 7 + 1)) + 7; // Random integer from 7 to 11 inclusive
+Math.floor(Math.random() * (20 - 10 + 1)) + 10; // Random integer from 10 to 20 inclusive
+
+Converting a String to a Number
+The standard Number function works similarly to the + operator for converting strings to numbers:
+
+console.log(
+  Number(text), // 3.14159
+  Number('27.5'), // 27.5
+  Number('2.4e3'), // 2400 - Exponential format
+  Number('0xABC'), // 2748 - Hexadecimal number
+  Number('0b1001'), // 9 - Binary number
+);
+
+We can also convert other value types into numbers:
+
+console.log(+true); // 1
+console.log(+false); // 0
+console.log(+null); // 0 
+console.log(+undefined); // NaN 
+
+If a full conversion of the string to a number isn't possible, the result of the conversion will be NaN:
+
+const text = 'Hello';
+
+console.log(
+  +text, // NaN - text isn't a number
+  +'35$', // NaN - $ isn't a valid number symbol
+  +'2.4.3', // NaN - a second decimal point isn't allowed
+  +'0xABCZ', // NaN - Z isn't a valid symbol in hexadecimal
+  +'0b10012', // NaN - 2 isn't a valid symbol in binary
+);
+
+For partial conversion of a numeric string, we can use the standard functions parseInt and parseFloat.
+
+parseInt takes two parameters: the value to convert and the number system (optional), and returns an integer or NaN if the string doesn't start with a number:
+
+parseInt('256$'); // 256 - stops at the first character that isn't part of an integer
+parseInt('123.456'); // 123 - the fractional part is discarded
+parseInt('256', 2); // NaN - because such digits don't exist in binary
+parseInt('1A'); // 1 - the letter `A` is ignored
+parseInt('1A', 16); // 26 — hexadecimal number
+parseInt('abc'); // NaN - the string doesn't start with a number in decimal
+
+parseFloat takes a value to convert and returns a number or NaN if conversion is impossible, for example:
+
+parseFloat('3.14'); // 3.14
+parseFloat('2.718 is the base of natural logarithm'); // 2.718
+parseFloat('abc'); // NaN, because the string doesn't start with a number
+
+This wraps up our overview of working with numbers in JavaScript. With these tools and techniques, you'll be well-equipped to handle various numerical operations, which are commonly required in programming.

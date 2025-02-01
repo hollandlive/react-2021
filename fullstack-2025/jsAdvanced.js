@@ -55,3 +55,16 @@ function getNumbersEquality(a, b) {
     return 'a and b are equal';
 }
 
+/*The isEven function takes a number as its argument. 
+Check if the number is even (is divisible by 2 without a remainder). 
+Return true if the number is even and false if the number is odd. 
+Remember that fractional numbers aren't even. */
+function isEven(number) {
+    if (number % 2 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+

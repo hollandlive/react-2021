@@ -12,39 +12,54 @@
 <body>
     <script>
 
+
         // // Example usage
         // const myArray = [1, 2, 3, 4, 5];
         // removeRandomItemsWithShuffle(myArray);
-        let gameBoard = [1, 1, 1, 1, 1, 1, 1, 1, 1];
-        // computer starts the game and choose the random number 
-        function computerPlays(gameBoard) {
-            const computerDraws = Math.floor(Math.random() * 8);
-            gameBoard[computerDraws] = 0;
-            return gameBoard;
-        }
-        function getAvailableMoves(gameBoard) {
-            let availableMoves = [];
-            for (let i = 0; i < gameBoard.length; i++) {
-                if (gameBoard[i] === 0) {
-                    availableMoves.push(i);
-                }
+        // let gameBoard = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+        // // computer starts the game and choose the random number 
+        // function computerPlays(gameBoard) {
+        //     const computerDraws = Math.floor(Math.random() * 8);
+        //     gameBoard[computerDraws] = 0;
+        //     return gameBoard;
+        // }
+        // function getAvailableMoves(gameBoard) {
+        //     let availableMoves = [];
+        //     for (let i = 0; i < gameBoard.length; i++) {
+        //         if (gameBoard[i] === 0) {
+        //             availableMoves.push(i);
+        //         }
+        //     }
+        //     return availableMoves;
+        // }
+
+        // // Human plays at a fixed position (replace with user input later)
+        // function humanPlays(gameBoard) {
+        //     let humanNumber = 6;
+        //     if (gameBoard[humanNumber] === 1) {
+        //         gameBoard[humanNumber] = 'X'; // Human marks the move
+        //     }
+        //     //  console.log(humanNumber);
+        //     return gameBoard;
+        // }
+        // // function computerPlays(gameBoard) { };
+        // console.log(computerPlays(gameBoard) + '  01');
+        // console.log(humanPlays(gameBoard) + '  02');
+        // console.log(getAvailableMoves(gameBoard)) + 'hh';
+
+
+        function isEven(number) {
+            if (number % 2 === 0) {
+                return true;
             }
-            return availableMoves;
+            else {
+                return false;
+            }
         }
 
-        // Human plays at a fixed position (replace with user input later)
-        function humanPlays(gameBoard) {
-            let humanNumber = 6;
-            if (gameBoard[humanNumber] === 1) {
-                gameBoard[humanNumber] = 'X'; // Human marks the move
-            }
-            //  console.log(humanNumber);
-            return gameBoard;
-        }
-        // function computerPlays(gameBoard) { };
-        console.log(computerPlays(gameBoard) + '  01');
-        console.log(humanPlays(gameBoard) + '  02');
-        console.log(getAvailableMoves(gameBoard)) + 'hh';
+        let number = 100;
+        let hh = isEven(number);
+        console.log(hh);
     </script>
     <div class="container">
         <table>

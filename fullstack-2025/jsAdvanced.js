@@ -68,3 +68,9 @@ function isEven(number) {
     }
 }
 
+/*
+Create a function getCentury that takes 
+a year number as its argument, 
+and returns the century for it.
+*/
+

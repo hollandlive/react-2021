@@ -48,18 +48,33 @@
         // console.log(getAvailableMoves(gameBoard)) + 'hh';
 
 
-        function isEven(number) {
-            if (number % 2 === 0) {
-                return true;
-            }
-            else {
-                return false;
+        // function getCentury(year) {
+        //     if (year === 0) {
+        //         return 1;
+        //     } else {
+        //         let century = Math.ceil(year / 100);
+        //         return century;
+        //     }
+        // }
+
+        // let year = 1000;
+        // let hh = getCentury(year);
+        // console.log(hh);
+
+        function makeDecision(fuelRemaining, distance, fuelConsumption) {
+            for (let i = 0; i <= makeDecision[i]; i++) {
+                if (makeDecision[i] > 0) {
+                    return makeDecision[i];
+                } else {
+                    return 'wrong';
+                }
+
             }
         }
+        let a = makeDecision(20, 22, 30);
+        console.log(a);
 
-        let number = 100;
-        let hh = isEven(number);
-        console.log(hh);
+
     </script>
     <div class="container">
         <table>
